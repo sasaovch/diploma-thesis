@@ -1,0 +1,6 @@
+CREATE TABLE files (
+    id SERIAL PRIMARY KEY,
+    url TEXT NOT NULL,
+    hash VARCHAR(255) NOT NULL,
+    created_at TIMESTAMPTZ DEFAULT NOW()
+)

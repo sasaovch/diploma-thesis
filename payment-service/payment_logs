@@ -1,0 +1,7 @@
+CREATE TABLE payment_logs (
+    id SERIAL PRIMARY KEY,
+    transaction_id INTEGER REFERENCES payment_transactions(id) ON DELETE CASCADE,
+    log_type VARCHAR(50),
+    details TEXT,
+    created_at TIMESTAMPTZ DEFAULT NOW()
+);
